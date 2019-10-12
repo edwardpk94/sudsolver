@@ -178,13 +178,13 @@ def verify_board(board):
     #check all entries in each square
     for square_rowDx in range(3):
         for square_colDx in range(3):
-            if not verify_square(board, square_rowDx, square_colDx):
+            if not __verify_square(board, square_rowDx, square_colDx):
                 print('ERROR:  didnt match during board verification')
                 return False
 
     return True
 
-def verify_square(board, square_rowDx, square_colDx):
+def __verify_square(board, square_rowDx, square_colDx):
     """Verify that a specified 3x3 'square' in a puzzle is solved correctly"""
 
     current_set = set()
